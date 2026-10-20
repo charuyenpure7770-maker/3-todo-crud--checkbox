@@ -282,6 +282,7 @@ async function onRemove(ele){
    let index = state.todoArr.findIndex(obj => obj.id === remove_id);
    state.todoArr.splice(index, 1);
    ele.closest("li").remove();
+   snackBar("todo is deleted successfully","success");
     }
     catch(err){
   snackBar(err.message,"error")
